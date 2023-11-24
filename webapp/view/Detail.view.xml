@@ -1,0 +1,53 @@
+<mvc:View
+    controllerName="table.tables.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Page
+        id="page"
+        title="Order Information"
+    >
+        <content>
+        <f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="orderID" />
+				<Text  text="{/OrderID}" />
+                <Label text="CustomerId" />
+				<Text  text="{/CustomerID}" />
+                <Label text="EmployeeID" />
+				<Text  text="{/EmployeeID}" />
+                <Label text="OrderDate" />
+				<Text  text="{/OrderDate}" />
+                <Label text="ShippedDate" />
+				<Text  text="{/ShippedDate}" />
+                <Label text="ShipCity" />
+				<Text  text="{/ShipCity}" />
+                 <Label text="Freight" />
+				<Text  text="{/Freight}" />
+                 <Label text="ShipPostalCode" />
+				<Text  text="{/ShipPostalCode}" />
+                 <Label text="ShipCountry" />
+				<Text  text="{/ShipCountry}" />
+				
+			</f:content>
+		</f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

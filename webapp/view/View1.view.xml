@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="table.tables.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <smartfilterbar:SmartFilterBar
+                id="idSmartFilter"
+                entitySet="Orders"
+            >
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration
+                        id="idorder"
+                        key="OrderID"
+                        label="OrderID"
+                        visibleInAdvancedArea="true"
+                    />
+                    <smartfilterbar:ControlConfiguration
+                        id="idemployee"
+                        key="EmployeeID"
+                        label="EmployeeID"
+                        visibleInAdvancedArea="true"
+                    />
+                    <smartfilterbar:ControlConfiguration
+                        id="idCustomerID"
+                        key="CustomerID"
+                        label="CustomerID"
+                        visibleInAdvancedArea="true"
+                    />
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+
+            <smartTable:SmartTable
+                entitySet="Orders"
+                enableAutoBinding="true"
+                tableType="ResponsiveTable"
+                initiallyVisibleFields="OrderID,CustomerID,EmployeeID,OrderDate,ShippedDate,Freight,ShipCountry"
+                smartFilterId="idSmartFilter"
+            >
+                <Table
+                    id="wert"
+                    selectionChange="handleselectionchange"
+                    mode="SingleSelectMaster"
+                />
+            </smartTable:SmartTable>
+        </content>
+    </Page>
+</mvc:View>
